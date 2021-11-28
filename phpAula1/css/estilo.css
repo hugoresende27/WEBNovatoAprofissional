@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+
+body{
+    background-color: rgb(190, 181, 181);
+    color: brown;
+}
+
+.main {
+    font-family:  'Inconsolata', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(219, 22, 22);
+    color: #fff;
+    width: 500px;
+    margin:  10px 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+}
+
+.pagina1{
+    width: 300px;
+    height: 200px;
+    background-color: rebeccapurple;
+    color: #fff;
+}
+.pagina2{
+    width: 100px;
+    height: 400px;
+    background-color: greenyellow;
+    color: #000;
+}
+
+ol li {
+    width: fit-content;
+    background-color: aqua;
+}
