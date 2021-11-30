@@ -4,9 +4,9 @@
         <div class="row fundo-topo align-items-center">
             <div class="col-6 p-3">
                 <h1>
-                    
+                    <a href="?p=contatos">
                         <img src="./assets/img/logo.jpg" alt="logo-topo" class="logo">
-                    
+                    </a>
                 </h1>
             </div>
 
