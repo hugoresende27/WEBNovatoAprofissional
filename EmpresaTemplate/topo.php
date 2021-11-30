@@ -1,11 +1,16 @@
+
 <div>
     <div class="container-fluid">
-        <div class="row fundo-topo">
-            <div class="col-6 p-5">
-                <h1>[LOGO EMPRESA]</h1>
+        <div class="row fundo-topo align-items-center">
+            <div class="col-6 p-3">
+                <h1>
+                    
+                        <img src="./assets/img/logo.jpg" alt="logo-topo" class="logo">
+                    
+                </h1>
             </div>
 
-            <div class="col-6 text-right p-5 topo-nav">
+            <div class="col-6 text-right p-3 topo-nav" >
                 <!-- <h3> -->
                 <a href="index.php">INICIO</a>
                 <a href="empresa.php">EMPRESA</a>
