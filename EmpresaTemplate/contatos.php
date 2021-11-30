@@ -1,8 +1,8 @@
 <?php
-    if (empty($_POST) == false) {//se o post contem dados , empty == falso
-        //echo 'tem dados!';
-        print_r($_POST);
-    }
+ //   if (empty($_POST) == false) {//se o post contem dados , empty == falso
+ //      //echo 'tem dados!';
+   //     print_r($_POST);
+  //  }
 ?>
 
 <h1>CONTATOS</h1>
@@ -23,10 +23,18 @@
 //////////////////////////////////////////////////////////////////////
 METODO GET todos os valores de input vão aparecer na query string
 METODO POST usado mais frequentemente
--->
+
 
 <form action="" method="post">
     <input type="text" name="userName">
     <input type="password" name="userPass">
     <input type="submit" value="Entrar">
+</form>
+-->
+
+<form action="tratar.php" method="post">
+    <input type="text" name="user" value="hugo">
+    <input type="password" name="pass" value="senha">
+    <input type="submit" value="Entrar">
+
 </form>
