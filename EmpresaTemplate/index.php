@@ -13,10 +13,12 @@ incluir todos os ficheiros trnasversais às páginas
     include ('layout/html_header.php');
     include ('layout/nav.php');
 
-    //$pag = "inicio";
+    $pag = "inicio";
     $pag = $_GET['p']; //superglobal GET, vai buscar todas as var na query string ?p=
     //include ($pag. '.php');     //concatenar todas as $pag a .php
-// SISTEMA DE ROTEAMENTO 
+
+// SISTEMA DE ROTEAMENTO /////////////////////////////////////////////////
+
 //COM ESTRUTURA IF'S
 
     // if ($pag == "inicio"){
