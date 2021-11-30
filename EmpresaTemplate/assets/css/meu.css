@@ -48,3 +48,24 @@
     text-decoration: none;
     color: darkblue;
 }
+
+/*SLIDES*/
+
+.slide1{
+    padding: 50px;
+    font-size: 2em;
+    background-color: chocolate;
+    color: #fff;
+}
+.slide2{
+    padding: 50px;
+    font-size: 2em;
+    background-color: darkmagenta;
+    color: #fff;
+}
+.slide3{
+    padding: 50px;
+    font-size: 2em;
+    background-color: darkolivegreen;
+    color: #fff;
+}
