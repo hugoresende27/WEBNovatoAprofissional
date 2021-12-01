@@ -29,10 +29,25 @@
                 }
             }
           
-            //envio de email 
-
+            //envio de email //https://www.php.net/manual/en/function.mail.php
+            /*
+            assinatura da função do manual:
+            mail(
+                string $to,
+                string $subject,
+                string $message,
+                array|string $additional_headers = [],
+                string $additional_params = ""
+            ): bool (return de booleano)
+            */
             if (empty($erro)){ //só vou enviar o email se não existir um erro, empty $erro
-                
+                $resultado = mail($email, $assunto, $msg);
+                if ($resultado) {//$resultado == true
+                    echo "Sucesso"; 
+                } else {
+                    echo "Erro";
+                }
+            }
            
         }                               
 
