@@ -1,40 +1,51 @@
+
+
 <?php
- //   if (empty($_POST) == false) {//se o post contem dados , empty == falso
- //      //echo 'tem dados!';
-   //     print_r($_POST);
-  //  }
+        //VALIDAÇÃO DO FROMULÁRIO, código em php escrito antes do form
+        //$email = $_POST['txtEmail'];//Notice: Undefined index: txtEmail
+        //echo var_dump($_SERVER);
+        if ($_SERVER['REQUEST_METHOD'] == 'POST'){//superglobal server, array com info de headers, paths, scripts, etc
+            //die("foi submetido o formulário");//vai mostrar header, msg do die e acaba ali, já não carrega layout de rodapé
+            $erro = '';
+
+            //verifica se existem todos os campos
+            if (!isset($_POST['txtEmail']) || 
+                !isset($_POST['txtAssunto']) ||
+                !isset($_POST['txtMsg'])) {
+                    $erro = "Pelo menos 1 dos campos não existe";
+                }
+
+            //ver se os campos estão preenchido
+            if (empty($erro)){
+                $email = $_POST['txtEmail'];
+                $assunto = $_POST['txtAssunto'];
+                $msg = $_POST['txtMsg'];
+                //ver se o email é válido (php valid email)
+                
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL) ){//https://www.php.net/manual/en/function.filter-var.php
+                        $erro = "Email inválido";
+                }
+            }
+          
+            //envio de email //https://www.php.net/manual/en/function.mail.php
+        }                               
+
 ?>
 
+
+
 <h1>CONTATOS</h1>
-<!--
-<form action="" method="get">  form é um conjunto de inputs que vai ser tratado na action, e o method pode ser get ou posto
-                        action para onde vão ser enviados os dados do formulário
 
-    <input type="text" name="nome">
-    <input type="text" name="apelido">
-    <input type="email" name="email"> email em HTML5 pede uma formatação com %@%
-    <input type="password" name="pass">
-    <input type="number" name="num">
-    <input type="range" name="range">
-    <input type="search" name="search">
-    <input type="date" name="datas">
+<form action="?p=contatos" method="post">  <!--ESTE FORM EM action vai ser submetido à mesma página, ?p=contatos = index.php?p=contatos-->
+
+    <input type="email" name="txtEmail" placeholder="Email" ><br>
+    <input type="text" name="txtAssunto" placeholder="assunto..." ><br>
+    <textarea name="txtMsg" cols="60" rows="3"></textarea><br>
+    <input type="submit" value="Enviar Mensagem"><!-- ao fazer submit recarrega o formulário vazio, porque ?=contatos-->
+
 
 </form>
-//////////////////////////////////////////////////////////////////////
-METODO GET todos os valores de input vão aparecer na query string
-METODO POST usado mais frequentemente
 
-
-<form action="" method="post">
-    <input type="text" name="userName">
-    <input type="password" name="userPass">
-    <input type="submit" value="Entrar">
-</form>
--->
-
-<form action="tratar.php" method="post">
-    <input type="text" name="user" value="hugo">
-    <input type="password" name="pass" value="senha">
-    <input type="submit" value="Entrar">
-
-</form>
+<?php if (!empty($erro)):     //verifica se $erro está existe e está vazio ou false se existir e não estiver vazio  ?>        
+    <div style="color: red;"> <?php echo $erro ?> </div>
+<?php endif; ?>
