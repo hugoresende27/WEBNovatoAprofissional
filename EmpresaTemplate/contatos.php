@@ -35,7 +35,7 @@
                 include('enviarEmail.php');
            
         }                               
-
+    }
 ?>
 
 
@@ -52,6 +52,7 @@
 
 </form>
 
-<?php if (!empty($erro)):     //verifica se $erro está existe e está vazio ou false se existir e não estiver vazio  ?>        
-    <div style="color: red;"> <?php echo $erro ?> </div>
+
+<?php if(!empty($erro)):?>   
+    <div style="color: red;">  <?php echo $erro ?> </div> 
 <?php endif; ?>
