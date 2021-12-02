@@ -32,7 +32,7 @@
             //envio de email 
 
             if (empty($erro)){ //só vou enviar o email se não existir um erro, empty $erro
-                
+                include('enviarEmail.php');
            
         }                               
 
