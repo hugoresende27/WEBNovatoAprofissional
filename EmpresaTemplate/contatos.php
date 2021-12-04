@@ -92,7 +92,9 @@
                 <div class="alert alert-success m-3">
                     <?php  echo $sucesso_newsletter ?>
                 </div>
-            <?php endif;  ?>
+            <?php endif;  ?> 
+
+           
            
 
         </div>

@@ -6,8 +6,8 @@
 }
 
 .logo{
-    width: 165px;;
-    height: 150px;
+    width: 65px;;
+    height: 50px;
     border-radius: 50%;
 }
 
@@ -22,7 +22,7 @@
     text-decoration: none;
     margin-left: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5rem;/*rem são relativos ao elemento root*/
+    font-size: 1.2rem;/*rem são relativos ao elemento root*/
     /*
     px são valores fixos, 
     

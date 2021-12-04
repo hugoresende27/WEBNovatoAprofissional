@@ -4,7 +4,7 @@
         <div class="row fundo-topo align-items-center">
             <div class="col-6 p-3">
                 <h1>
-                    <a href="?p=contatos">
+                    <a href="?p=inicio">
                         <img src="./assets/img/logo.jpg" alt="logo-topo" class="logo">
                     </a>
                 </h1>
@@ -18,6 +18,7 @@
                 <a href="?p=empresa">EMPRESA</a>
                 <a href="?p=servicos">SERVIÇOS</a>
                 <a href="?p=contatos">CONTATOS</a>
+                <a href="?p=areaReservada">ÁREA RESERVADA</a>
                 <!-- </h3> -->
             </div>
         </div>

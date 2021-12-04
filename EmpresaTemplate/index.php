@@ -10,10 +10,26 @@ incluir todos os ficheiros trnasversais às páginas
 
 */
 
+    session_start();
+
     include ('layout/html_header.php');
     include ('layout/nav.php');
 
     $pag = "inicio";
+    
+
+    /*
+    //$_SESSION['user'] = 'hugo';
+    //print_r($_SESSION);
+
+
+    if(isset($_SESSION['user']) && ($_SESSION['user'] == 'hugo')) {
+        echo 'logado!';
+    } else {
+        echo 'NAO LOGADO!';
+    }
+
+    */
 
     if (isset($_GET['p'])){/*Se existe a variavel p?, se está definida, isset ($_GET['p']*/
         $pag = $_GET['p']; //superglobal GET, vai buscar todas as var na query string ?p=
@@ -52,13 +68,38 @@ incluir todos os ficheiros trnasversais às páginas
         case 'contatos':
             include ('contatos.php');
             break;
+        case 'areaReservada':
+            //VERIFICA SE HOUVE SUBMISSÃO DO FORMULÁRIO
+            if ($_SERVER['REQUEST_METHOD']=='POST'){
+                //die('formulário submetido!');
+                //VOU CRIAR UMA FUNÇÃO PARA USAR PARA VERIFICAR O LOGIN, EM VEZ DE ESCREVER TODO O CÓDIGO AQUI
+                verificarLogin();
+            }
+            include ('areaReservada.php');
+            break;
         default:
             include ('inicio.php');
             break;
     }
     
     include ('layout/footer.php');
-    include ('layout/html_footer.php')
+    include ('layout/html_footer.php');
+
+function verificarLogin(){
+    $user = 'admin';
+    $pass = '1234';
+    //verifica se os dados do post correspondem
+    if(($_POST['txtUser'] == $user) && ($_POST['txtPass'] == $pass)){
+        //echo 'OK!';
+        /////CRIAR DADOS DA SESSÃO 
+       
+        $_SESSION['user'] = $user;  //  <-- AQUI ESTOU A CRIAR NA SESSION O USER, E A DIZER Q vai receber a var $user ou ao $_POST['txtUSer'] que vai ser igual ao $user no caso de login com sucesso
+        return true;
+    } else {
+        //echo 'NOT OK';
+        return false;
+    }
+}
 
 
 ?>
