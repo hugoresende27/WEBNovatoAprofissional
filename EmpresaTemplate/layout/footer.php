@@ -10,8 +10,8 @@
             
             <a href="https://www.twitter.com" target="_blank" class="ml-4"><i class="fa fa-twitter-square fa-2x"></i></a>
             
-            <a href="https://www.instagram.com" target="_blank" class="ml-4"><i class="fa fa-instagram fa-2x"></i></a>
-            <hr>
+            <a href="https://www.instagram.com" target="_blank" class="ml-4"><i class="fa fa-instagram fa-2x"></i></a>&nbsp;
+            
             <?php   echo date('d-m-Y') ;//conteudo dinâmico, ano ('Y')
                     echo '&nbsp&nbsp Horas: '; 
                     echo date ('H:i:s') ;//Hora minutos e segundos
