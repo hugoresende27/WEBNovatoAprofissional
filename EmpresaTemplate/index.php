@@ -76,11 +76,14 @@ incluir todos os ficheiros trnasversais às páginas
             break;
         case 'areaReservada':
             //VERIFICA SE HOUVE SUBMISSÃO DO FORMULÁRIO
+            $erro = false;
             if ($_SERVER['REQUEST_METHOD']=='POST'){
                 //die('formulário submetido!');
                 //VOU CRIAR UMA FUNÇÃO PARA USAR PARA VERIFICAR O LOGIN, EM VEZ DE ESCREVER TODO O CÓDIGO AQUI
                 if (verificarLogin()){      //função retorna true ou false
-                    include ('layout/user.php');
+                    include ('layout/user.php');    //////////////////true -> login válido
+                } else {
+                    $erro = true;                   /////////////////false -> login inválido
                 }
             }
             include ('areaReservada.php');
