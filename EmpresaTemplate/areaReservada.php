@@ -22,19 +22,18 @@
 
         <?php if($erro): ?>
 
-            <div class="alert alert-danger text-center">
+            <div class="alert alert-danger text-center" id="erro">
                 Login Inválido!
             </div>
             
         <?php endif;?>
-
         </form>
-
         </div>
     </div>
-
 </div>
-  
- 
 
 <?php endif; ?>
+
+<script>
+    $('#erro').delay(3000).fadeOut('slow');//se encontrar #erro, espera 3 segundos e desaparece
+</script>

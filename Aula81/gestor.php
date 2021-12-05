@@ -11,10 +11,10 @@
 class Gestor
 {    
     private $db_server = 'localhost';
-    private $db_name = 'newsletter';
+    private $db_name = 'bd_81';
     private $db_charset = 'utf8';
-    private $db_username = 'root';
-    PRIVATE $db_password = '';
+    private $db_username = 'admin';
+    PRIVATE $db_password = '1234';
 
     //=================================================================================
     //função para Read  executar uma query, devolve conjunto de dados
